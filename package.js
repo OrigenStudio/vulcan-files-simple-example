@@ -27,6 +27,12 @@ Package.onUse(api => {
     'origenstudio:vulcan-files',
   ]);
 
+  api.addFiles('lib/stylesheets/style.scss');
+
+  api.addAssets([
+    'lib/static/vulcanstagram.png'
+  ], ['client']);
+
   api.mainModule('lib/server/main.js', 'server');
   api.mainModule('lib/client/main.js', 'client');
 });
