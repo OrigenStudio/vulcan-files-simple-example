@@ -33,6 +33,18 @@ Package.onUse(api => {
     'lib/static/vulcanstagram.png'
   ], ['client']);
 
+  api.addAssets([
+    'lib/static/pics/cherry_blossoms.jpg',
+    'lib/static/pics/koyo.jpg',
+    'lib/static/pics/cat.jpg',
+    'lib/static/pics/osaka_tram.jpg',
+    'lib/static/pics/matsuri.jpg',
+    'lib/static/pics/flowers.jpg',
+    'lib/static/pics/kyoto-night.jpg',
+    'lib/static/pics/kaisendon.jpg',
+    'lib/static/pics/forest.jpg',
+  ], 'server');
+
   api.mainModule('lib/server/main.js', 'server');
   api.mainModule('lib/client/main.js', 'client');
 });
