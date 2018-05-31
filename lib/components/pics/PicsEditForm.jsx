@@ -14,6 +14,7 @@ const PicsEditForm = ({documentId, closeModal}) =>
   <Components.SmartForm 
     collection={Pics}
     documentId={documentId}
+    queryFragment={getFragment('PicsDetailsFragment')}
     mutationFragment={getFragment('PicsDetailsFragment')}
     showRemove={true}
     successCallback={document => {
