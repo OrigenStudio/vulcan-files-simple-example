@@ -59,7 +59,7 @@ const Header = ({currentUser}) =>
     <div className="header">
       
       <h1 className="logo">
-        <img src="/packages/example-instagram/lib/static/vulcanstagram.png" alt="Vulcanstagram"/>
+        <img src="/packages/vulcan-files-simple-example/lib/static/vulcanstagram.png" alt="Vulcanstagram"/>
       </h1>
 
       {currentUser ? 
