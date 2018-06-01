@@ -24,7 +24,7 @@ Package.onUse(api => {
 
     // third-party packages
     'fourseven:scss@4.5.0',
-    'origenstudio:vulcan-files',
+    'origenstudio:vulcan-files@0.0.2',
   ]);
 
   api.addFiles('lib/stylesheets/style.scss');
