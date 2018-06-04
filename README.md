@@ -30,6 +30,6 @@ meteor npm start
 
 ## Examples
 
-This repo also contains the following example apps: 
+This repo contains the following example apps: 
 
 - [**Instagram Example**](https://github.com/OrigenStudio/vulcan-files-simple-example/tree/master/packages/example-instagram): create a simple Instagram clone (runs by default)
