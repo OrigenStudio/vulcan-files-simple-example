@@ -1,6 +1,6 @@
 Package.describe({
   name: 'origenstudio:vulcan-files-example-instagram',
-  version: '0.0.1',
+  version: '0.0.2',
   summary: 'This is a simple example that implements a file system in the Vulcan framework',
   git: 'https://github.com/OrigenStudio/vulcan-files-simple-example',
   documentation: 'README.md'
@@ -15,12 +15,12 @@ Package.onUse(api => {
     'promise',
 
     // vulcan core
-    'vulcan:core@1.10.1',
+    'vulcan:core@1.11.0',
 
     // vulcan packages
-    'vulcan:forms@1.10.1',
-    'vulcan:accounts@1.10.1',
-    'vulcan:forms-upload@1.10.1',
+    'vulcan:forms@1.11.0',
+    'vulcan:accounts@1.11.0',
+    'vulcan:forms-upload@1.11.0',
 
     // third-party packages
     'fourseven:scss@4.5.0',

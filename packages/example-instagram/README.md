@@ -1,6 +1,6 @@
 # Vulcanstagram files example
 
-Usage example for [origenstudio:vulcan-files](https://github.com/OrigenStudio/vulcan-files) using Vulcan's `example-instagram@1.10.1` (you can download it from [Vulcan-Starter](https://github.com/VulcanJS/Vulcan-Starter)) as base.
+Usage example for [origenstudio:vulcan-files](https://github.com/OrigenStudio/vulcan-files) using Vulcan's `example-instagram@1.11.0` (you can download it from [Vulcan-Starter](https://github.com/VulcanJS/Vulcan-Starter)) as base.
 
 ### Features
 
