@@ -16,7 +16,7 @@ If you already have Meteor up and running, read this section. Otherwise, read th
 
 ```
 git clone git@github.com:OrigenStudio/vulcan-files-simple-example.git
-cd Vulcan-Starter
+cd vulcan-files-simple-example
 ```
 
 (or, using `https`: `git clone https://github.com/OrigenStudio/vulcan-files-simple-example.git`)
