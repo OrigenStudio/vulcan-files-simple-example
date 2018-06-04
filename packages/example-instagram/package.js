@@ -1,6 +1,6 @@
 Package.describe({
   name: 'origenstudio:vulcan-files-example-instagram',
-  version: '0.0.1',
+  version: '0.0.2',
   summary: 'This is a simple example that implements a file system in the Vulcan framework',
   git: 'https://github.com/OrigenStudio/vulcan-files-simple-example',
   documentation: 'README.md'
