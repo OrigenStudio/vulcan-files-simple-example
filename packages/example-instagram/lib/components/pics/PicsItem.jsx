@@ -1,4 +1,4 @@
-/* 
+/*
 
 An item in the pics list.
 
@@ -11,7 +11,7 @@ const PicsItem = ({pic, currentUser}) =>
 
   <div className="pics-item">
 
-    <Components.ModalTrigger className="pics-details-modal" component={<div className="pics-image"><img src={pic.imageUrl}/></div>}>
+    <Components.ModalTrigger className="pics-details-modal" component={<div className="pics-image"><img src={pic.image.url}/></div>}>
       <Components.PicsDetails documentId={pic._id} currentUser={currentUser} />
     </Components.ModalTrigger>
 
@@ -20,7 +20,7 @@ const PicsItem = ({pic, currentUser}) =>
       <div className="pics-comment-count">
         <Components.Icon name="comment" /> {pic.commentsCount}
       </div>
-      
+
     </div>
 
   </div>

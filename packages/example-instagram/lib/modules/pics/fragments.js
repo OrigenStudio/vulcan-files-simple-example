@@ -1,4 +1,4 @@
-/* 
+/*
 
 Register the GraphQL fragment used to query for data
 
@@ -14,7 +14,10 @@ registerFragment(/* GraphQL */`
     user {
       displayName
     }
-    imageUrl
+    image {
+      name
+      url
+    }
     commentsCount
   }
 `);
@@ -28,7 +31,10 @@ registerFragment(/* GraphQL */`
       displayName
     }
     imageId
-    imageUrl
+    image {
+      name
+      url
+    }
     commentsCount
     body
   }
