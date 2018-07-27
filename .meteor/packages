@@ -9,8 +9,12 @@ vulcan:i18n-en-us
 
 ############ Accounts Packages ############
 
-accounts-password@1.4.0
+accounts-password@1.5.1
 
 ############ Your Packages ############
 
 origenstudio:vulcan-files-example-instagram
+standard-minifier-css
+standard-minifier-js
+shell-server
+dynamic-import
