@@ -11,6 +11,7 @@ if (getSetting('amazonAWSS3.mainBucket.client')) {
 }
 
 export default createFSCollection({
+  typeName: 'PicFile',
   collectionName: 'PicsFiles',
   uploadTo3rdParty: thirdParty.upload,
   deleteFrom3rdParty: thirdParty.delete,
