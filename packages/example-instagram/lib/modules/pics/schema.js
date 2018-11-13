@@ -4,7 +4,6 @@ A SimpleSchema-compatible JSON schema
 
 */
 import once from 'lodash/once';
-import isString from 'lodash/isString';
 import { curryFileCheck } from 'meteor/origenstudio:files-helpers';
 import { generateFieldSchema, Image } from 'meteor/origenstudio:vulcan-files';
 
@@ -45,42 +44,20 @@ const schema = {
   ...generateFieldSchema({
     FSCollection: PicsFiles,
     fieldName: 'imageId',
+    resolverName: 'image',
     fieldSchema: {
-      label: 'Image URL',
+      label: 'Image',
+      viewableBy: ['guests'],
+      insertableBy: ['members'],
+      editableBy: ['members'],
       form: {
         fileCheck: once(() => curryFileCheck({
           maxSize: 5 * 1024 * 1024, // 5Mbytes
           fileTypeRegExp:  /png|jpg|jpeg/i,
         })),
-        FileRender: once(() => Image),
-        previewFromValue: once(() => (value, index, props) => {
-          if (isString(value)) {
-            // is stored value
-            return {
-              // retrieve url from resolved field
-              url: props.document.imageUrl,
-              // we do not have the name of the file here, so we'll set
-              // from the body of the document (this is optional)
-              name: props.currentValues.body || props.document.body,
-            };
-          } else {
-            // is an uploaded file, do nothing and preview will be retrieved
-            // by `previewFromFile` prop
-          }
-        }),
+        FileRender: () => Image,
       },
     },
-    resolverName: 'imageUrl',
-    // only resolve field on the server, where PicsFiles is defined
-    resolver: PicsFiles
-      ? async ({ imageId }) => {
-          if (!imageId) {
-            return null;
-          }
-          const imageFile = await PicsFiles.loader.load(imageId);
-          return imageFile ? PicsFiles.link(imageFile) : null;
-        }
-      : null,
   }),
   body: {
     label: 'Body',

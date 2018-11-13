@@ -1,17 +1,18 @@
 import { getSetting } from 'meteor/vulcan:core';
-import { createS3Client, createFSCollection } from 'meteor/origenstudio:vulcan-files';
+import { createFSCollection } from 'meteor/origenstudio:vulcan-files';
+import createS3StorageProvider from 'meteor/origenstudio:vulcan-files-s3';
 
-let thirdParty = {};
+let storageProvider;
 
 if (getSetting('amazonAWSS3.mainBucket.client')) {
-  thirdParty = createS3Client(
+  storageProvider = createS3StorageProvider(
     getSetting('amazonAWSS3.mainBucket.client'),
     getSetting('amazonAWSS3.mainBucket.cfdomain'),
   );
 }
 
 export default createFSCollection({
+  typeName: 'PicFile',
   collectionName: 'PicsFiles',
-  uploadTo3rdParty: thirdParty.upload,
-  deleteFrom3rdParty: thirdParty.delete,
+  storageProvider,
 });
