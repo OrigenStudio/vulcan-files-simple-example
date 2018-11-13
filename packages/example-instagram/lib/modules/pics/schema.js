@@ -4,7 +4,6 @@ A SimpleSchema-compatible JSON schema
 
 */
 import once from 'lodash/once';
-import isString from 'lodash/isString';
 import { curryFileCheck } from 'meteor/origenstudio:files-helpers';
 import { generateFieldSchema, Image } from 'meteor/origenstudio:vulcan-files';
 
@@ -56,7 +55,7 @@ const schema = {
           maxSize: 5 * 1024 * 1024, // 5Mbytes
           fileTypeRegExp:  /png|jpg|jpeg/i,
         })),
-        FileRender: once(() => Image),
+        FileRender: () => Image,
       },
     },
   }),
